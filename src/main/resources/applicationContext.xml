@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="smallEngine" class="section3.dependencyInjection.parts.SmallEngine">
+        <constructor-arg value="150"/>
+    </bean>
+
+    <bean id="mrBeansCarSmall" class="section3.dependencyInjection.vehicles.Vehicle">
+        <constructor-arg ref="smallEngine"/>
+    </bean>
+
+    <bean id="largeEngine" class="section3.dependencyInjection.parts.LargeEngine">
+        <constructor-arg value="400"/>
+    </bean>
+
+    <bean id="mrBeansCarLarge" class="section3.dependencyInjection.vehicles.Vehicle">
+        <constructor-arg ref="largeEngine"/>
+    </bean>
+
+</beans>
