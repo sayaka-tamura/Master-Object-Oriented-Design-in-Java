@@ -1,5 +1,10 @@
 package section3.Lecture_11;
 
+/**
+ * @author Sayaka Tamura
+ *
+ */
+// Behavior During Runtime
 public class App {
 
 	public static void main(String[] args) {

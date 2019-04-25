@@ -1,5 +1,10 @@
 package section3.Lecture_11;
 
+/**
+ * @author Sayaka Tamura
+ *
+ */
+// Vehicle class will respond to these 3 messages
 public class Vehicle {
 
 	public void startEngine() {
