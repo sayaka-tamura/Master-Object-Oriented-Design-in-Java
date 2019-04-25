@@ -1,4 +1,4 @@
-package section2_1;
+package section2;
 
 /**
  * @author : Sayaka Tamura
