@@ -6,7 +6,7 @@
  */
 package section3.SingleResponsibiltyPrinciple.Client;
 
-import section3.SingleResponsibiltyPrinciple.DAO.EmployeeDAO;
+import section3.SingleResponsibiltyPrinciple.domain.dao.EmployeeDAO;
 
 public class ClientModule {
 	EmployeeDAO empDAO;
