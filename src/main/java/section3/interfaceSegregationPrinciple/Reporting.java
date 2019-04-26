@@ -1,12 +1,15 @@
-package section2.interfaceSegregationPrinciple;
+// Interface Segregation : No clients should be forced to depend on methods they do not use
+// "Reporting" is interface to connect "Report Generator" and "Customer Transaction"
+
+package section3.interfaceSegregationPrinciple;
 
 import java.util.Date;
 
 public interface Reporting {
+	// Methods for reporting
+	public String getName();
 
-    String getName();
+	public Date getDate();
 
-    Date getDate();
-
-    String productBreakDown();
+	public String productBreakDown();
 }

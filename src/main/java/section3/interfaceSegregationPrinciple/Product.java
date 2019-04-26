@@ -1,29 +1,26 @@
-package section2.interfaceSegregationPrinciple;
+// Interface Segregation : No clients should be forced to depend on methods they do not use
+
+package section3.interfaceSegregationPrinciple;
 
 public class Product {
 
-    private int productId;
+	private int productId;
 
-    private String productName;
+	private String productName;
 
-    public Product(int productId, String productName) {
-        this.productId = productId;
-        this.productName = productName;
-    }
+	public int getProductId() {
+		return productId;
+	}
 
-    public int getProductId() {
-        return productId;
-    }
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
 
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
+	public String getProductName() {
+		return productName;
+	}
 
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
 }

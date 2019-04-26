@@ -1,14 +1,13 @@
-package section2.interfaceSegregationPrinciple;
+// Interface Segregation : No clients should be forced to depend on methods they do not use
+
+package section3.interfaceSegregationPrinciple;
 
 public class ReportGenerator {
 
-    private Reporting transactionObject;
+	private Reporting transactionObject; // Interface: "Reporting"
 
-    public ReportGenerator(Reporting transactionObject) {
-        this.transactionObject = transactionObject;
-    }
-
-    public void generateReport() {
-        System.out.println(transactionObject.getName() + " " + transactionObject.productBreakDown() + " " + transactionObject.getDate());
-    }
+	public void generateReport() {
+		System.out.println(transactionObject.getName() + " " + transactionObject.productBreakDown() + " "
+				+ transactionObject.getDate());
+	}
 }
