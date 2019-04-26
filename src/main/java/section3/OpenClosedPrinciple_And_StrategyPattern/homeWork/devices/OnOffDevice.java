@@ -5,6 +5,4 @@ public interface OnOffDevice {
 	void on();
 
 	void off();
-
-	String getName();
 }

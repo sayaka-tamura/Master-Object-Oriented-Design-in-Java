@@ -2,8 +2,10 @@ package section3.OpenClosedPrinciple_And_StrategyPattern.homeWork.remotes;
 
 import section3.OpenClosedPrinciple_And_StrategyPattern.homeWork.devices.OnOffDevice;
 
+// Remote Control's Responsibilities
 public class RemoteControl {
 
+	private OnOffDevice onOffDevice = null;
 	private static RemoteControl instance;
 
 	public static RemoteControl getInstance() {
@@ -13,15 +15,16 @@ public class RemoteControl {
 		return instance;
 	}
 
-	public static void connect(OnOffDevice onOffDevice) {
-		System.out.println("Connected to: " + onOffDevice.getName());
+	public void connectToDevice(OnOffDevice onOffDevice) {
+		this.onOffDevice = onOffDevice;
+		System.out.println("---- Connected to: " + onOffDevice + "----");
 	}
 
-	public static void turnOn(OnOffDevice onOffDevice) {
+	public void clickOnButton() {
 		onOffDevice.on();
 	}
 
-	public static void turnOff(OnOffDevice onOffDevice) {
+	public void clickOffButton() {
 		onOffDevice.off();
 	}
 }
