@@ -1,27 +1,27 @@
-package section2.openClosedPrincipleHomework.remotes;
+package section3.OpenClosedPrinciple_And_StrategyPattern.homeWork.remotes;
 
-import section2.openClosedPrincipleHomework.devices.OnOffDevice;
+import section3.OpenClosedPrinciple_And_StrategyPattern.homeWork.devices.OnOffDevice;
 
 public class RemoteControl {
 
-    private static RemoteControl instance;
+	private static RemoteControl instance;
 
-    public static RemoteControl getInstance() {
-        if (instance == null) {
-            instance = new RemoteControl();
-        }
-        return instance;
-    }
+	public static RemoteControl getInstance() {
+		if (instance == null) {
+			instance = new RemoteControl();
+		}
+		return instance;
+	}
 
-    public static void connect(OnOffDevice onOffDevice) {
-        System.out.println("Connected to: " + onOffDevice.getName());
-    }
+	public static void connect(OnOffDevice onOffDevice) {
+		System.out.println("Connected to: " + onOffDevice.getName());
+	}
 
-    public static void turnOn(OnOffDevice onOffDevice) {
-        onOffDevice.on();
-    }
+	public static void turnOn(OnOffDevice onOffDevice) {
+		onOffDevice.on();
+	}
 
-    public static void turnOff(OnOffDevice onOffDevice) {
-        onOffDevice.off();
-    }
+	public static void turnOff(OnOffDevice onOffDevice) {
+		onOffDevice.off();
+	}
 }

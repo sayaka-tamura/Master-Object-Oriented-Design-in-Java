@@ -1,10 +1,10 @@
-package section2.openClosedPrincipleHomework.devices;
+package section3.OpenClosedPrinciple_And_StrategyPattern.homeWork.devices;
 
 public interface OnOffDevice {
 
-    void on();
+	void on();
 
-    void off();
+	void off();
 
-    String getName();
+	String getName();
 }
