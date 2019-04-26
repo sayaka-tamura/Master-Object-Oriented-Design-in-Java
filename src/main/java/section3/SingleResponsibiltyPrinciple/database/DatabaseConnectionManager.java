@@ -17,34 +17,42 @@ import java.sql.SQLException;
 
 public class DatabaseConnectionManager {
 
-	private Connection connection;
+	private Connection conn;
 
-	private static DatabaseConnectionManager instance;
+	private static DatabaseConnectionManager connectionInstance = new DatabaseConnectionManager();
 
-	public DatabaseConnectionManager() {
+	private DatabaseConnectionManager() {
 	}
 
-	public static DatabaseConnectionManager getInstance() {
-		if (instance == null) {
-			instance = new DatabaseConnectionManager();
+	public static DatabaseConnectionManager getManagerInstance() {
+		if (connectionInstance == null) {
+			connectionInstance = new DatabaseConnectionManager();
 		}
-		return instance;
+		return connectionInstance;
 	}
 
-	public void connect() {
+	/**
+	 * contains connection details
+	 * 
+	 * @throws SQLException
+	 */
+
+	public void connect() throws SQLException {
+		// processing specific to database connection details...
 		try {
-			connection = DriverManager.getConnection("Database URL");
+			conn = DriverManager.getConnection("Some Database URL");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Connecting to the database");
+		System.out.println("Establised Database Connection...");
 	}
 
 	public Connection getConnectionObject() {
-		return connection;
+		return conn;
 	}
 
-	public void disconnect() {
-		System.out.println("Disconnecting");
+	public void disconnect() throws SQLException {
+		conn.close();
+		System.out.println("Disconnected from Database...");
 	}
 }
