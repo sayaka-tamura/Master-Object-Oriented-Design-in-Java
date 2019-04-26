@@ -4,6 +4,8 @@
  * Udemy Master Object Oriented Design in Java
  * 
  */
+
+// Doctor <is A> Employee
 package section3.OpenClosedPrinciple_And_StrategyPattern.practice;
 
 public class Doctor extends Employee {
