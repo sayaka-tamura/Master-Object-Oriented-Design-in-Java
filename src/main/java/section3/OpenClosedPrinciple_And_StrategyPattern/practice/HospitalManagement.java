@@ -4,7 +4,7 @@
  * Udemy Master Object Oriented Design in Java
  * 
  */
-package section3.OpenClosedPrinciple_And_StrategyPattern;
+package section3.OpenClosedPrinciple_And_StrategyPattern.practice;
 
 public class HospitalManagement {
 

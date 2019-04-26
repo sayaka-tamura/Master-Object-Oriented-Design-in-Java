@@ -1,4 +1,4 @@
-package section3.OpenClosedPrinciple_And_StrategyPattern;
+package section3.OpenClosedPrinciple_And_StrategyPattern.practice;
 
 abstract public class Employee {
 
