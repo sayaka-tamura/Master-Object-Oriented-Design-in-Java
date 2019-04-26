@@ -5,7 +5,7 @@
  * 
  */
 
-// Doctor <is A> Employee
+// Doctor <is A> Employee, This is substitutable for their base class "Employee" (LSP)
 package section3.OpenClosedPrinciple_And_StrategyPattern.practice;
 
 public class Doctor extends Employee {
