@@ -12,7 +12,8 @@ public abstract class GeneralManufacturingProcess {
 		return processName;
 	}
 
-	// Template method
+	// Template method : abstract methods can be implemented in the subclasses
+	// but they are implemented in the abstract class itself
 	public void launchProcess() {
 		if (processName != null && !processName.isEmpty()) {
 			assembleDevice();
