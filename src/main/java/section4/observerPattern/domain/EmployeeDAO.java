@@ -1,4 +1,4 @@
-package domain;
+package section4.observerPattern.domain;
 
 import java.util.ArrayList;
 import java.util.List;

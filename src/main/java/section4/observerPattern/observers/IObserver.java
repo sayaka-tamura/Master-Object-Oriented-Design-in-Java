@@ -1,8 +1,8 @@
-package section3.observerPatternHomework.detailedSolution.observers;
+package section4.observerPattern.observers;
 
-import section3.observerPatternHomework.detailedSolution.domain.Employee;
+import section4.observerPattern.domain.Employee;
 
 public interface IObserver {
 
-    void callMe(Employee employee, String message);
+	void callMe(Employee employee, String message);
 }

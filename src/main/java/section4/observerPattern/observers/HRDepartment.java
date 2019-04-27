@@ -1,12 +1,12 @@
-package section3.observerPatternHomework.detailedSolution.observers;
+package section4.observerPattern.observers;
 
-import section3.observerPatternHomework.detailedSolution.domain.Employee;
+import section4.observerPattern.domain.Employee;
 
 public class HRDepartment implements IObserver {
 
-    @Override
-    public void callMe(Employee employee, String message) {
-        System.out.println("HR department notified");
-        System.out.println(message + employee);
-    }
+	@Override
+	public void callMe(Employee employee, String message) {
+		System.out.println("HR department notified");
+		System.out.println(message + employee);
+	}
 }

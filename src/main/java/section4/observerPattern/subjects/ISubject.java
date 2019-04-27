@@ -1,12 +1,12 @@
-package section3.observerPatternHomework.detailedSolution.subjects;
+package section4.observerPattern.subjects;
 
-import section3.observerPatternHomework.detailedSolution.observers.IObserver;
+import section4.observerPattern.observers.IObserver;
 
 public interface ISubject {
 
-    void registerObserver(IObserver observer);
+	void registerObserver(IObserver observer);
 
-    void removeObserver(IObserver observer);
+	void removeObserver(IObserver observer);
 
-    void notifyObservers();
+	void notifyObservers();
 }
