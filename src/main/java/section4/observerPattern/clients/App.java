@@ -23,7 +23,12 @@ public class App {
 		Employee bob = new Employee("Bob", new Date(), 35000, true);
 		ems.hireNewEmployee(bob);
 
-		ems.modifyEmployeeName(6, "Bobby");
-		ems.modifyEmployeeName(234, "Conan");
+		// ems.modifyEmployeeName(6, "Bobby");
+		// ems.modifyEmployeeName(234, "Conan");
+
+		ems.showEmployees();
+
+		ems.deleteEmployee(6, "Bobby");
+		ems.showEmployees();
 	}
 }

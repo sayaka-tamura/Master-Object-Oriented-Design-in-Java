@@ -1,6 +1,7 @@
 package section4.observerPattern.subjects;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import section4.observerPattern.domain.Employee;
@@ -42,6 +43,7 @@ public class EmployeeManagementSystem implements ISubject {
 		}
 	}
 
+	// create
 	public void hireNewEmployee(Employee employee) {
 		this.employee = employee;
 		message = "New hire: ";
@@ -49,6 +51,14 @@ public class EmployeeManagementSystem implements ISubject {
 		notifyObservers();
 	}
 
+	// read
+	public void showEmployees() {
+		for (Employee employee : employees) {
+			System.out.println(employee);
+		}
+	}
+
+	// update
 	public void modifyEmployeeName(int id, String name) {
 		boolean notify = false;
 		for (Employee employee : employees) {
@@ -59,6 +69,26 @@ public class EmployeeManagementSystem implements ISubject {
 				notify = true;
 			}
 		}
+		if (notify) {
+			notifyObservers();
+		}
+	}
+
+	// delete
+	public void deleteEmployee(int id, String name) {
+		boolean notify = false;
+
+		Iterator<Employee> itr = employees.iterator();
+		Employee currentEmployee = null;
+		while (itr.hasNext()) {
+			currentEmployee = itr.next();
+			if (id == currentEmployee.getEmployeeID()) {
+				itr.remove();
+				message = "Employee quited: ";
+				notify = true;
+			}
+		}
+
 		if (notify) {
 			notifyObservers();
 		}
