@@ -1,6 +1,6 @@
-package section4.Lecture_26.dependencyInjection.vehicles;
+package section4.dependencyInjection.vehicles;
 
-import section4.Lecture_26.dependencyInjection.parts.Engine;
+import section4.dependencyInjection.parts.Engine;
 
 public class Vehicle {
 

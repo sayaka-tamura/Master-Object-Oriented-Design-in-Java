@@ -4,10 +4,10 @@
  * Udemy Master Object Oriented Design in Java
  * Section 4 Lecture 26 "Dependency Injeciton Part I"
  */
-package section4.Lecture_26.dependencyInjection.app;
+package section4.dependencyInjection.app;
 
-import section4.Lecture_26.dependencyInjection.parts.SmallEngine;
-import section4.Lecture_26.dependencyInjection.vehicles.Vehicle;
+import section4.dependencyInjection.parts.SmallEngine;
+import section4.dependencyInjection.vehicles.Vehicle;
 
 public class App {
 	public static void main(String[] args) {
