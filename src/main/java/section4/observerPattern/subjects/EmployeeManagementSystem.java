@@ -39,7 +39,7 @@ public class EmployeeManagementSystem implements ISubject {
 	@Override
 	public void notifyObservers() {
 		for (IObserver departments : observers) {
-			departments.callMe(employee, message);
+			departments.callMe(employee, message); // each args is what saved to local value from CRUD
 		}
 	}
 
