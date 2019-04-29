@@ -1,3 +1,5 @@
+// Builder Pattern : creating object instances dealing with classes which have a large number of constructor arguments
+
 package section4.builderPattern;
 
 public class User {
@@ -44,6 +46,7 @@ public class User {
 
 		private String address; // Optional
 
+		// Constructors for Builder class
 		public Builder(String userName, String emailAddress) {
 			this.userName = userName;
 			this.emailAddress = emailAddress;
@@ -69,6 +72,7 @@ public class User {
 			return this;
 		}
 
+		// method for building User class
 		public User build() {
 			return new User(this);
 		}
